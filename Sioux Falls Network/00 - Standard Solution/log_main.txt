@@ -1,0 +1,142 @@
+[WARNING] File link_qvdf.csv does not exist. Please check.
+affic Assignment Solution           
+ Overview of files and process
+1. Input Files:
+   |--- Physical Layer (node.csv, link.csv)
+   |--- Demand Layer (demand.csv, departure_time_profile, demand_file_list, subarea)
+   |--- Configuration Files (settings.yml, scenario_index_list)
+   |--- Supply Layer (link_type)
+
+2. Traffic Assignment and Simulation Process:
+   |--- Demand estimation based on sensor data
+   |--- Traffic assignment based on network and demand data
+   |--- Simulation of traffic based on assignment results and scenario configurations
+   |--- Performance evaluation based on simulation results and performance criteria
+
+3. Output Files:
+   |--- Link performance (link_performance_s.csv, link_performance_summary.csv)
+   |--- Route assignment (route_assignment_s.csv)
+   |--- OD pair and district performance (od_performance_summary.csv, district_performance_s.csv)
+   |--- Trajectory performance (agent_s.csv, trajectory.csv)
+   |--- System performance (system_performance_summary.csv, final_summary.csv)
+   |--- Logs and subarea mapping summary(log_main.txt, log_label_correcting, zonal_hierarchy_mapping.csv)
+--------------------------
+Please provide feedback or report any issues you encounter on our GitHub site: https://github.com/asu-trans-ai-lab/DTALite/issues. Your input helps us enhance the software, address any concerns, and contribute to the open-source transportation ecosystem.
+[PROCESS INFO] Step 0.0: Reading settings.yml.
+[DATA INFO] UE_convergence_percentage = 0.010000 (%) in settings.yml.
+[DATA INFO] number_of_column_updating_iterations = 40 in settings.yml.
+[DATA INFO] simulation_output = 0 in settings.yml.
+[DATA INFO] number_of_memory_blocks = 1 in settings.yml.
+[DATA INFO] number_of_iterations = 20 in settings.yml.
+[DATA INFO] max_num_significant_zones_in_subarea = 50000 in settings.yml.
+[DATA INFO] max_num_significant_zones_outside_subarea = 50000 in settings.yml.
+length_unit = km in settings.yml.
+speed_unit = kmph in settings.yml.
+value = 100
+[DATA INFO] reading file demand.csv, scenario no : 0, cumulative total demand volume is 3.606e+05
+[PROCESS INFO]
+demand_period and mode_type   total_demand     #_of_links      speed_mph     speed_kmph      length km   avg_lane_cap   avg_length_m
+             am,auto      3.606e+05             76          60.00          96.56         314.00       10247.21        4131.58
+[PROCESS INFO] Step 3: Allocating tasks to different memory blocks for efficient computing.
+[DATA INFO] There are 1 shortest path (SP) networks stored in memory for processing.
+[DATA INFO] There are 24 different agent types across various zones. These computations will be performed by the multi CPU processors.
+[PROCESS INFO] Step 4: Optimizing traffic assignment with Column Generation, an iterative method of adding (path) variables to solve large-scale problems. The optimization process involves creating and updating a set of candidate routes, known as the column pool
+[DATA INFO] Perform 20 iterations for the Column Generation process
+[PROCESS INFO] Creating a file named 'zonal_hierarchy_mapping.csv', which contains data about zones related to each subarea. This file will help us focus our approach on specific areas. 
+[PROCESS INFO] Current active scenario index: 0. Corresponding total demand: 360600.00.
+--------------------------
+[PROCESS INFO] Step 4.1: Reading dynamic_traffic_management data...
+No dynamic lane use scenarios found in section dynamic_traffic_management.
+No lane closure scenarios found in section dynamic_traffic_management.
+[DATA INFO] Iter. No.   CPU time(s) Sys. Wide Travel TimeAvg TT              Least sys. TT       UE Gap (%)  
+[DATA INFO] 1           0.00        2.70e+07            74.85               3.18e+06            749.80      
+[DATA INFO] 2           0.00        2.38e+07            65.95               6.88e+06            245.59      
+[DATA INFO] 3           0.00        2.15e+07            59.56               8.87e+06            142.07      
+[DATA INFO] 4           0.00        1.49e+07            41.20               9.95e+06            49.35       
+[DATA INFO] 5           0.00        1.25e+07            34.64               1.03e+07            20.98       
+[DATA INFO] 6           0.00        1.12e+07            31.13               1.00e+07            12.02       
+[DATA INFO] 7           0.00        1.05e+07            29.06               9.53e+06            9.91        
+[DATA INFO] 8           0.00        9.97e+06            27.65               9.12e+06            9.30        
+[DATA INFO] 9           0.00        9.61e+06            26.65               8.83e+06            8.86        
+[DATA INFO] 10          0.00        9.33e+06            25.87               8.64e+06            7.96        
+[DATA INFO] 11          0.00        9.14e+06            25.34               8.50e+06            7.47        
+[DATA INFO] 12          0.00        8.95e+06            24.82               8.40e+06            6.51        
+[DATA INFO] 13          0.00        8.81e+06            24.44               8.25e+06            6.86        
+[DATA INFO] 14          0.00        8.70e+06            24.12               8.21e+06            5.97        
+[DATA INFO] 15          0.00        8.61e+06            23.88               8.14e+06            5.80        
+[DATA INFO] 16          0.00        8.52e+06            23.63               8.09e+06            5.37        
+[DATA INFO] 17          0.00        8.45e+06            23.44               8.03e+06            5.24        
+[DATA INFO] 18          0.00        8.39e+06            23.27               7.99e+06            5.10        
+[DATA INFO] 19          0.00        8.33e+06            23.11               7.97e+06            4.62        
+[PROCESS INFO] Step 5: Column Pool Updating
+[DATA INFO] Total number of column pool updating iterations = 40
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[DATA INFO] column updating           0             22.61          3.75e+05            2.3395
+[DATA INFO] column updating           1             21.04          1.51e+05            1.0852
+[DATA INFO] column updating           2             20.21          5.48e+04            0.3977
+[DATA INFO] column updating           3             20.81          3.57e+04            0.2596
+[DATA INFO] column updating           4             20.63          3.12e+04            0.2269
+[DATA INFO] column updating           5             21.17          2.73e+04            0.1988
+[DATA INFO] column updating           6             20.59          2.48e+04            0.1805
+[DATA INFO] column updating           7             20.80          2.30e+04            0.1675
+[DATA INFO] column updating           8             20.68          2.16e+04            0.1572
+[DATA INFO] column updating           9             20.61          2.05e+04            0.1489
+[DATA INFO] column updating          10             20.94          1.96e+04            0.1423
+[DATA INFO] column updating          11             20.62          1.87e+04            0.1363
+[DATA INFO] column updating          12             20.25          1.80e+04            0.1309
+[DATA INFO] column updating          13             20.35          1.74e+04            0.1264
+[DATA INFO] column updating          14             20.82          1.70e+04            0.1234
+[DATA INFO] column updating          15             20.72          1.65e+04            0.1198
+[DATA INFO] column updating          16             20.79          1.61e+04            0.1169
+[DATA INFO] column updating          17             20.52          1.57e+04            0.1144
+[DATA INFO] column updating          18             20.75          1.55e+04            0.1122
+[DATA INFO] column updating          19             20.32          1.52e+04            0.1107
+[DATA INFO] column updating          20             21.01          1.50e+04            0.1088
+[DATA INFO] column updating          21             20.40          1.47e+04            0.1071
+[DATA INFO] column updating          22             20.85          1.45e+04            0.1056
+[DATA INFO] column updating          23             21.45          1.44e+04            0.1043
+[DATA INFO] column updating          24             21.32          1.41e+04            0.1024
+[DATA INFO] column updating          25             20.68          1.40e+04            0.1019
+[DATA INFO] column updating          26             20.81          1.38e+04            0.1002
+[DATA INFO] column updating          27             20.66          1.36e+04            0.0989
+[DATA INFO] column updating          28             21.18          1.35e+04            0.0984
+[DATA INFO] column updating          29             20.82          1.34e+04            0.0970
+[DATA INFO] column updating          30             20.91          1.33e+04            0.0963
+[DATA INFO] column updating          31             20.20          1.32e+04            0.0955
+[DATA INFO] column updating          32             20.65          1.30e+04            0.0944
+[DATA INFO] column updating          33             20.67          1.29e+04            0.0938
+[DATA INFO] column updating          34             20.78          1.28e+04            0.0931
+[DATA INFO] column updating          35             20.60          1.27e+04            0.0921
+[DATA INFO] column updating          36             20.70          1.26e+04            0.0916
+[DATA INFO] column updating          37             21.11          1.25e+04            0.0910
+[DATA INFO] column updating          38             20.58          1.24e+04            0.0901
+[DATA INFO] column updating          39             21.19          1.23e+04            0.0896
+[PROCESS INFO] Step 6: OD demand matrix estimation if section sensor_data is provided in settings.yml.
+[PROCESS INFO] Step 7: Performing Sensitivity Analysis. Proceeds only if sectiondynamic_traffic_management is provided with dtm_type set to either 'lane_closure'. 
+[PROCESS INFO] Step 7.1: Applying dynamic traffic_management scenarios
+[DATA INFO]  # of DTM records = 0
+[PROCESS INFO] Step 7.2: record route volume before applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 7.3: path column regeneration for applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 5: Column Re-Generation for Traffic Assignment...
+[DATA INFO] Total Column Re-Generation iteration: 0
+[DATA INFO] Regenerating column for real-time information provision - Iteration Number: 0
+, CPU time: 0.0050 s
+[PROCESS INFO] Step 7.4: skip: path column modification for dms users, as dms count = 0
+[PROCESS INFO] Step 7.5: path column pool optimization for real time information users
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[PROCESS INFO] Step 7.6: record route volume after applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 8: Executing Traffic Simulation. Proceeds only if simulation_output is set to 1 in settings.yml . 
+[DATA INFO] Total CPU running time for the entire process = 0.1820 s
+[PROCESS INFO] Step 9: Collecting statistics, generating zonal hierarchy mapping (e.g., Zone to Super-Zone and Zone to District Mapping)
+[PROCESS INFO] Step 10: Outputting Traffic Assignment and Simulation Results.
+[STATUS INFO] writing route_assignment.csv for each scenario
+[STATUS INFO] writing file link_performance.csv
+[STATUS INFO] writing district_performance_s.csv..
+[STATUS INFO] writing od_performance_summary.csv..
+[STATUS INFO] writing data for 24  zones 
+[STATUS INFO] writing link_performances_summary.csv..
+[STATUS INFO] writing link_performances_summary_2way.csv..
+[DATA INFO] CPU running time for outputting simulation results: 0.0620 s
+[STATUS INFO] Freeing memory..
+[DATA INFO] CPU running time for the entire process: 0 min 0 sec
+[STATUS INFO] DTALite computing process has successfully completed. Congratulations on a successful execution! Feel free to review the results and explore the generated outputs. Thank you for using DTALite and contributing to the advancement of transportation analysis and open science.

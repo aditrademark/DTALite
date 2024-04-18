@@ -1,0 +1,316 @@
+[PROCESS INFO] Step 0: reading section scenarios
+[STATUS INFO] scenario_index=0,scenario_name=,2025
+[PROCESS INFO] Step 1.1: Reading section demand_period ...
+,demand_period= 1, am,time_period=0700_0800, 420-> 480
+[PROCESS INFO] Step 1.2: Reading section mode_type...
+mode_type =, auto, real time info flag = 0
+link_type =, 1, link_type_name = motorway
+,mode_type= auto,cap= 2000,free_speed=60
+, number of activity nodes defined in node.csv=, 24
+, number of boundary activity nodes defined in node.csv=, 0
+[PROCESS INFO] Step 1: read network node.csv, link.csv 
+,# of nodes = ,48
+,# of links =,76
+,# of zones =,24
+[PROCESS INFO] Step 1: read network node.csv, link.csv, zone.csv 
+,# of nodes = ,48
+,# of links =,76
+,# of zones =,24
+,summary by road link type,link_type,link_type_name,# of links,avg_free_speed_mph,avg_free_speed_kmph,,total_length,total_capacity,avg_lane_capacity,avg_length_in_meter,
+,,-1,,0,0,0,0,0,0,0,
+,,1,motorway,76,60,96.5604,314,778788,10247.2,4131.58,
+,,-1,,,,1,motorway,[PROCESS INFO] Step 2.1: read demand, defined in demand_files section.
+[STATUS INFO] reading demand file for scenario index = 0
+,summary by multi-modal and demand types,demand_period,mode_type,total demmand volume in scenario 0, # of links,avg_free_speed_mph,avg_free_speed_kmph,total_length_in_km,total_capacity,avg_lane_capacity,avg_length_in_meter,
+,,am,auto,360600,76,60,96.5604,314,778788,10247.2,4131.58,
+,from_flag,to_flag,volume
+,from_flag,to_flag,volume
+FOCUSING internal step 1: Focus-subarea Approach,0=not related, 1=significantly related external but not in cutoff, 2= cut-off external, 3= inside
+,0,1,2,3,
+0,0,0,0,0
+1,0,0,0,0
+2,0,0,0,0
+3,0,0,0,360600
+FOCUSING internal step 2: Origin-based flow extraction,top 10 OD,rank,o,d,inside_flag_o,inside_flag_d,mode_type,departure_time,volume
+,,1,16,10,3,3,auto,am,4400
+,,2,10,16,3,3,auto,am,4400
+,,3,10,15,3,3,auto,am,4000
+,,4,10,11,3,3,auto,am,4000
+,,5,15,10,3,3,auto,am,4000
+,,6,11,10,3,3,auto,am,3900
+,,7,17,10,3,3,auto,am,3900
+,,8,10,17,3,3,auto,am,3900
+,,9,16,17,3,3,auto,am,2800
+,,10,17,16,3,3,auto,am,2800
+,,11,9,10,3,3,auto,am,2800
+,,12,10,9,3,3,auto,am,2800
+,,13,22,10,3,3,auto,am,2600
+,,14,10,22,3,3,auto,am,2600
+,,15,22,15,3,3,auto,am,2600
+,,16,15,22,3,3,auto,am,2600
+,,17,10,20,3,3,auto,am,2500
+,,18,20,10,3,3,auto,am,2500
+,,19,22,20,3,3,auto,am,2400
+,,20,20,22,3,3,auto,am,2400
+,,21,16,8,3,3,auto,am,2200
+,,22,8,16,3,3,auto,am,2200
+,,23,23,22,3,3,auto,am,2100
+,,24,10,14,3,3,auto,am,2100
+,,25,22,23,3,3,auto,am,2100
+,,26,14,10,3,3,auto,am,2100
+,,27,10,12,3,3,auto,am,2000
+,,28,12,10,3,3,auto,am,2000
+,,29,10,7,3,3,auto,am,1900
+,,30,7,10,3,3,auto,am,1900
+,,31,10,13,3,3,auto,am,1900
+,,32,13,10,3,3,auto,am,1900
+,,33,10,19,3,3,auto,am,1800
+,,34,10,23,3,3,auto,am,1800
+,,35,23,10,3,3,auto,am,1800
+,,36,22,21,3,3,auto,am,1800
+,,37,19,10,3,3,auto,am,1800
+,,38,21,22,3,3,auto,am,1800
+,,39,20,17,3,3,auto,am,1700
+,,40,17,22,3,3,auto,am,1700
+,,41,22,17,3,3,auto,am,1700
+,,42,17,20,3,3,auto,am,1700
+,,43,17,19,3,3,auto,am,1700
+,,44,19,17,3,3,auto,am,1700
+,,45,20,16,3,3,auto,am,1600
+,,46,8,10,3,3,auto,am,1600
+,,47,11,14,3,3,auto,am,1600
+,,48,10,8,3,3,auto,am,1600
+,,49,16,20,3,3,auto,am,1600
+,,50,14,11,3,3,auto,am,1600
+,,51,11,4,3,3,auto,am,1500
+,,52,17,15,3,3,auto,am,1500
+,,53,15,17,3,3,auto,am,1500
+,,54,11,12,3,3,auto,am,1400
+,,55,12,11,3,3,auto,am,1400
+,,56,8,17,3,3,auto,am,1400
+,,57,11,15,3,3,auto,am,1400
+,,58,11,16,3,3,auto,am,1400
+,,59,16,9,3,3,auto,am,1400
+,,60,16,11,3,3,auto,am,1400
+,,61,16,7,3,3,auto,am,1400
+,,62,7,16,3,3,auto,am,1400
+,,63,17,8,3,3,auto,am,1400
+,,64,15,11,3,3,auto,am,1400
+,,65,11,9,3,3,auto,am,1400
+,,66,9,16,3,3,auto,am,1400
+,,67,4,11,3,3,auto,am,1400
+,,68,9,11,3,3,auto,am,1400
+,,69,22,13,3,3,auto,am,1300
+,,70,14,15,3,3,auto,am,1300
+,,71,23,11,3,3,auto,am,1300
+,,72,13,12,3,3,auto,am,1300
+,,73,13,22,3,3,auto,am,1300
+,,74,11,23,3,3,auto,am,1300
+,,75,15,14,3,3,auto,am,1300
+,,76,10,1,3,3,auto,am,1300
+,,77,1,10,3,3,auto,am,1300
+,,78,12,13,3,3,auto,am,1300
+,,79,16,19,3,3,auto,am,1300
+,,80,19,16,3,3,auto,am,1300
+,,81,4,10,3,3,auto,am,1200
+,,82,22,14,3,3,auto,am,1200
+,,83,22,16,3,3,auto,am,1200
+,,84,14,22,3,3,auto,am,1200
+,,85,21,10,3,3,auto,am,1200
+,,86,22,19,3,3,auto,am,1200
+,,87,20,21,3,3,auto,am,1200
+,,88,20,19,3,3,auto,am,1200
+,,89,19,22,3,3,auto,am,1200
+,,90,19,20,3,3,auto,am,1200
+,,91,10,21,3,3,auto,am,1200
+,,92,16,15,3,3,auto,am,1200
+,,93,10,4,3,3,auto,am,1200
+,,94,15,16,3,3,auto,am,1200
+,,95,16,22,3,3,auto,am,1200
+,,96,21,20,3,3,auto,am,1200
+,,97,24,22,3,3,auto,am,1100
+,,98,22,11,3,3,auto,am,1100
+,,99,20,15,3,3,auto,am,1100
+,,100,23,14,3,3,auto,am,1100
+[PROCESS INFO]Step 4: Column Generation for Traffic Assignment
+,Total number of column generation iterations =, 100
+,Total number of column generation iterations =, 100
+[DATA INFO] Iteration, CPU running time (sec), # of agents, Avg Travel Time(min),  Avg UE gap %
+0,0.001,360600,0,0
+1,0.001,360600,74.8463,749.797
+2,0,360600,65.9543,245.591
+3,0.001,360600,59.5629,142.073
+4,0,360600,41.2,49.3508
+5,0,360600,34.6422,20.9823
+6,0,360600,31.1308,12.0164
+7,0,360600,29.0564,9.91442
+8,0,360600,27.6478,9.29589
+9,0,360600,26.6523,8.86104
+10,0,360600,25.8668,7.95898
+11,0,360600,25.3442,7.47185
+12,0,360600,24.8179,6.5143
+13,0,360600,24.4367,6.86224
+14,0,360600,24.1227,5.97415
+15,0,360600,23.8845,5.80164
+16,0,360600,23.6303,5.37009
+17,0,360600,23.4374,5.24252
+18,0,360600,23.2743,5.10383
+19,0,360600,23.1142,4.61991
+20,0,360600,22.9942,4.33072
+21,0,360600,22.8391,4.03255
+22,0,360600,22.7193,4.12546
+23,0,360600,22.6469,4.0932
+24,0,360600,22.5658,3.72479
+25,0,360600,22.4731,3.41998
+26,0,360600,22.3712,3.2584
+27,0.001,360600,22.3228,3.58054
+28,0,360600,22.2598,3.2149
+29,0,360600,22.2247,3.15555
+30,0,360600,22.1296,2.8286
+31,0,360600,22.091,3.04601
+32,0,360600,22.0461,2.78844
+33,0.001,360600,21.9981,2.69331
+34,0,360600,21.963,2.68885
+35,0,360600,21.917,2.52373
+36,0,360600,21.9022,2.63568
+37,0,360600,21.8724,2.4595
+38,0,360600,21.841,2.36672
+39,0,360600,21.814,2.38153
+40,0,360600,21.7709,2.16232
+41,0,360600,21.7589,2.29214
+42,0,360600,21.7437,2.21934
+43,0,360600,21.7112,2.03905
+44,0,360600,21.6705,1.98798
+45,0,360600,21.6602,2.07512
+46,0,360600,21.6377,1.93587
+47,0,360600,21.6243,1.96451
+48,0,360600,21.6027,1.86878
+49,0,360600,21.571,1.83972
+50,0.001,360600,21.5585,1.86032
+51,0,360600,21.5513,1.82061
+52,0,360600,21.5382,1.76656
+53,0,360600,21.4911,1.58557
+54,0,360600,21.4878,1.79922
+55,0,360600,21.4819,1.74741
+56,0,360600,21.4705,1.64955
+57,0,360600,21.438,1.48428
+58,0.001,360600,21.4393,1.67656
+59,0,360600,21.4286,1.55582
+60,0,360600,21.4133,1.50841
+61,0,360600,21.3988,1.52004
+62,0,360600,21.3971,1.50229
+63,0,360600,21.3893,1.44941
+64,0,360600,21.3616,1.35328
+65,0,360600,21.3548,1.4564
+66,0,360600,21.3466,1.38208
+67,0,360600,21.3419,1.36246
+68,0.001,360600,21.3288,1.37261
+69,0,360600,21.3148,1.29004
+70,0,360600,21.3118,1.33852
+71,0,360600,21.2953,1.23296
+72,0,360600,21.2923,1.29033
+73,0,360600,21.2915,1.33602
+74,0,360600,21.2742,1.19765
+75,0,360600,21.2699,1.22981
+76,0,360600,21.269,1.2424
+77,0,360600,21.2535,1.17152
+78,0,360600,21.2451,1.17932
+79,0,360600,21.2455,1.19817
+80,0,360600,21.2413,1.1517
+81,0,360600,21.2349,1.1241
+82,0,360600,21.2149,1.02071
+83,0,360600,21.2131,1.14977
+84,0,360600,21.2127,1.11779
+85,0,360600,21.2137,1.08149
+86,0,360600,21.2001,1.01252
+87,0,360600,21.1973,1.08085
+88,0,360600,21.1896,1.01765
+89,0,360600,21.183,1.03099
+90,0,360600,21.1818,1.0392
+91,0,360600,21.169,0.963295
+92,0,360600,21.1685,1.04624
+93,0,360600,21.1644,0.97862
+94,0,360600,21.1527,0.945584
+95,0,360600,21.155,0.990108
+96,0,360600,21.1398,0.921203
+97,0,360600,21.1438,1.00725
+98,0,360600,21.145,0.953935
+99,0.001,360600,21.1368,0.88962
+[PROCESS INFO] Step 5: column pool-based flow updating for traffic assignment 
+,# of flow updating iterations=,40
+column updating
+[DATA INFO] column updating: iteration = 0, avg travel time = 21.8944(min), optimization obj = 69552.3, Relative_gap = 0.485794 %
+[DATA INFO] column updating: iteration = 1, avg travel time = 20.6509(min), optimization obj = 21862, Relative_gap = 0.157724 %
+[DATA INFO] column updating: iteration = 2, avg travel time = 20.6631(min), optimization obj = 8895.51, Relative_gap = 0.0641621 %
+[DATA INFO] column updating: iteration = 3, avg travel time = 21.0872(min), optimization obj = 5773.47, Relative_gap = 0.0416443 %
+[DATA INFO] column updating: iteration = 4, avg travel time = 21.2086(min), optimization obj = 5022.53, Relative_gap = 0.0362252 %
+[DATA INFO] column updating: iteration = 5, avg travel time = 20.5801(min), optimization obj = 4471.13, Relative_gap = 0.0322453 %
+[DATA INFO] column updating: iteration = 6, avg travel time = 21.2124(min), optimization obj = 4054.32, Relative_gap = 0.0292382 %
+[DATA INFO] column updating: iteration = 7, avg travel time = 21.0371(min), optimization obj = 3853.87, Relative_gap = 0.0277912 %
+[DATA INFO] column updating: iteration = 8, avg travel time = 21.0982(min), optimization obj = 3468.33, Relative_gap = 0.0250102 %
+[DATA INFO] column updating: iteration = 9, avg travel time = 20.9752(min), optimization obj = 3321.63, Relative_gap = 0.0239514 %
+[DATA INFO] column updating: iteration = 10, avg travel time = 20.7851(min), optimization obj = 3081.12, Relative_gap = 0.0222165 %
+[DATA INFO] column updating: iteration = 11, avg travel time = 20.8506(min), optimization obj = 2986.57, Relative_gap = 0.0215342 %
+[DATA INFO] column updating: iteration = 12, avg travel time = 21.1145(min), optimization obj = 2851.5, Relative_gap = 0.0205596 %
+[DATA INFO] column updating: iteration = 13, avg travel time = 20.8095(min), optimization obj = 2734.87, Relative_gap = 0.0197183 %
+[DATA INFO] column updating: iteration = 14, avg travel time = 20.626(min), optimization obj = 2666.68, Relative_gap = 0.0192262 %
+[DATA INFO] column updating: iteration = 15, avg travel time = 20.864(min), optimization obj = 2573.21, Relative_gap = 0.0185519 %
+[DATA INFO] column updating: iteration = 16, avg travel time = 21.1186(min), optimization obj = 2524.56, Relative_gap = 0.0182007 %
+[DATA INFO] column updating: iteration = 17, avg travel time = 21.0846(min), optimization obj = 2444.65, Relative_gap = 0.0176244 %
+[DATA INFO] column updating: iteration = 18, avg travel time = 20.9155(min), optimization obj = 2418.41, Relative_gap = 0.0174348 %
+[DATA INFO] column updating: iteration = 19, avg travel time = 20.5083(min), optimization obj = 2362.88, Relative_gap = 0.0170342 %
+[DATA INFO] column updating: iteration = 20, avg travel time = 20.7277(min), optimization obj = 2348.64, Relative_gap = 0.0169313 %
+[DATA INFO] column updating: iteration = 21, avg travel time = 21.0665(min), optimization obj = 2293.91, Relative_gap = 0.0165364 %
+[DATA INFO] column updating: iteration = 22, avg travel time = 20.7237(min), optimization obj = 2290.33, Relative_gap = 0.0165104 %
+[DATA INFO] column updating: iteration = 23, avg travel time = 20.714(min), optimization obj = 2234.6, Relative_gap = 0.0161084 %
+[DATA INFO] column updating: iteration = 24, avg travel time = 20.8817(min), optimization obj = 2211.41, Relative_gap = 0.015941 %
+[DATA INFO] column updating: iteration = 25, avg travel time = 20.6831(min), optimization obj = 2183.74, Relative_gap = 0.0157413 %
+[DATA INFO] column updating: iteration = 26, avg travel time = 20.78(min), optimization obj = 2155.96, Relative_gap = 0.0155409 %
+[DATA INFO] column updating: iteration = 27, avg travel time = 20.9631(min), optimization obj = 2142.17, Relative_gap = 0.0154413 %
+[DATA INFO] column updating: iteration = 28, avg travel time = 20.7327(min), optimization obj = 2105.52, Relative_gap = 0.0151769 %
+[DATA INFO] column updating: iteration = 29, avg travel time = 20.9499(min), optimization obj = 2094.1, Relative_gap = 0.0150944 %
+[DATA INFO] column updating: iteration = 30, avg travel time = 20.781(min), optimization obj = 2068.8, Relative_gap = 0.0149119 %
+[DATA INFO] column updating: iteration = 31, avg travel time = 20.8173(min), optimization obj = 2041.55, Relative_gap = 0.0147153 %
+[DATA INFO] column updating: iteration = 32, avg travel time = 20.9163(min), optimization obj = 2033.22, Relative_gap = 0.0146551 %
+[DATA INFO] column updating: iteration = 33, avg travel time = 21.0375(min), optimization obj = 2005.2, Relative_gap = 0.0144531 %
+[DATA INFO] column updating: iteration = 34, avg travel time = 20.8476(min), optimization obj = 1994.49, Relative_gap = 0.0143757 %
+[DATA INFO] column updating: iteration = 35, avg travel time = 20.7219(min), optimization obj = 1969.87, Relative_gap = 0.0141981 %
+[DATA INFO] column updating: iteration = 36, avg travel time = 20.5958(min), optimization obj = 1954.41, Relative_gap = 0.0140866 %
+[DATA INFO] column updating: iteration = 37, avg travel time = 20.7283(min), optimization obj = 1943.02, Relative_gap = 0.0140044 %
+[DATA INFO] column updating: iteration = 38, avg travel time = 20.7172(min), optimization obj = 1927.61, Relative_gap = 0.0138932 %
+[DATA INFO] column updating: iteration = 39, avg travel time = 20.6593(min), optimization obj = 1912.63, Relative_gap = 0.0137851 %
+[PROCESS INFO] Step 7: perform sensitivity analysis if section dynamic_traffic_management is provided for dtm_type = lane_closure or dms. 
+Sensitivity analysis stage
+,Iteration,Avg Travel Time(min)
+0,20.6848,
+column updating
+[PROCESS INFO] Step 8: Executing Traffic Simulation. Proceeds only if simulation_output is set to 1 in settings.yml. 
+, system - wide information activate time = 99999 in min
+, # of simulated agents in agent.csv=,360600,
+,simu time=,0 min, CA =,0,CD=,0, speed=,60, travel time =,0,CI=,0,CR=,0
+,simu time=,10 min, CA =,1210,CD=,78, speed=,57.702, travel time =,3.0928,CI=,0,CR=,0
+,simu time=,20 min, CA =,2659,CD=,1142, speed=,59.031, travel time =,6.9841,CI=,0,CR=,0
+,simu time=,30 min, CA =,4241,CD=,2706, speed=,59.241, travel time =,8.7111,CI=,0,CR=,0
+,simu time=,40 min, CA =,5478,CD=,4161, speed=,59.286, travel time =,9.0724,CI=,0,CR=,0
+,simu time=,50 min, CA =,6723,CD=,5536, speed=,59.309, travel time =,9.2354,CI=,0,CR=,0
+,simu time=,60 min, CA =,7957,CD=,6753, speed=,59.324, travel time =,9.3405,CI=,0,CR=,0
+,simu time=,70 min, CA =,8721,CD=,7844, speed=,59.334, travel time =,9.4094,CI=,0,CR=,0
+[PROCESS INFO] Step 9: Collecting statistics, Generating Zonal Hierarchy Mapping (e.g., Zone to Super-Zone and Zone to District Mapping) 
+Output Link Performance:
+,ref_link_vol_count=,0,MAPE=,0%
+,VMT=,2.1285e+06,VKT=,3.4247e+06
+,VHT=,1.2432e+05
+,network vehicle speed (MPH) =,17.121,,network vehicle speed (KPH) =,27.548
+,PMT=,2.1285e+06,PKT=,3.4247e+06
+,PHT=,1.2432e+05
+,network person speed (MPH) =,17.121,,network person speed (KPH) =,27.548
+,simple avg link volume=,11569
+,simple avg link speed=,34.357
+,simple avg link speed ratio=,0.57261
+,summary by multi-modal agents,mode_type,#_agents,avg_distance,avg_travel_time_in_min,avg_free_speed,
+, # of simulated agents in trajectory.csv=,360601,avg # of nodes per agent=5.4383
+     Check OD connectivity and accessibility in od_performance_summary.csv
+, # of connected OD pairs =, 0
+, # of OD/mode_type/demand_type columns without paths =, 528
+Output Link Performance Summary
+Output 2 Way Link Performance Summary

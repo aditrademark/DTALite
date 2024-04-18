@@ -1,0 +1,173 @@
+[WARNING] File link_qvdf.csv does not exist. Please check.
+affic Assignment Solution           
+ Overview of files and process
+1. Input Files:
+   |--- Physical Layer (node.csv, link.csv)
+   |--- Demand Layer (demand.csv, departure_time_profile, demand_file_list, subarea)
+   |--- Configuration Files (settings.yml, scenario_index_list)
+   |--- Supply Layer (link_type)
+
+2. Traffic Assignment and Simulation Process:
+   |--- Demand estimation based on sensor data
+   |--- Traffic assignment based on network and demand data
+   |--- Simulation of traffic based on assignment results and scenario configurations
+   |--- Performance evaluation based on simulation results and performance criteria
+
+3. Output Files:
+   |--- Link performance (link_performance_s.csv, link_performance_summary.csv)
+   |--- Route assignment (route_assignment_s.csv)
+   |--- OD pair and district performance (od_performance_summary.csv, district_performance_s.csv)
+   |--- Trajectory performance (agent_s.csv, trajectory.csv)
+   |--- System performance (system_performance_summary.csv, final_summary.csv)
+   |--- Logs and subarea mapping summary(log_main.txt, log_label_correcting, zonal_hierarchy_mapping.csv)
+--------------------------
+Please provide feedback or report any issues you encounter on our GitHub site: https://github.com/asu-trans-ai-lab/DTALite/issues. Your input helps us enhance the software, address any concerns, and contribute to the open-source transportation ecosystem.
+[PROCESS INFO] Step 0.0: Reading settings.yml.
+[DATA INFO] UE_convergence_percentage = 0.010000 (%) in settings.yml.
+[DATA INFO] number_of_column_updating_iterations = 40 in settings.yml.
+[DATA INFO] simulation_output = 0 in settings.yml.
+[DATA INFO] number_of_memory_blocks = 1 in settings.yml.
+[DATA INFO] number_of_iterations = 40 in settings.yml.
+[DATA INFO] max_num_significant_zones_in_subarea = 50000 in settings.yml.
+[DATA INFO] max_num_significant_zones_outside_subarea = 50000 in settings.yml.
+length_unit = meter in settings.yml.
+speed_unit = kmph in settings.yml.
+al         357          60     96.5604     10.5141      373000        1000     29.4512
+[PROCESS INFO]           8     service        1579          60     96.5604     49.9518  1.2704e+06         800     31.6351
+[PROCESS INFO]           9    cycleway         187          60     96.5604     6.29627      156800         800     33.6699
+[PROCESS INFO]          10     footway        1977          60     96.5604     57.4301  1.5816e+06         800     29.0491
+[PROCESS INFO]          15unclassified          66          60     96.5604      2.4984       52800         800     37.8545
+[PROCESS INFO]          20   connector        1258          60     96.5604     66.1674   5.032e+06        2000     52.5973
+[INFO] There are 0 records in file link_qvdf.csv
+[PROCESS INFO] Step 1.7: reading section demand_files_for_subarea
+[PROCESS INFO] Step 2.0: Reading section departure_time_profile
+[DATA INFO] At time 0:0 (T0000) , the demand ratio is 0.
+[DATA INFO] At time 8:0 (T0800) , the demand ratio is 0.
+[DATA INFO] Cumulative profile no.1, ratio at slot  1 (0:5) = 0.000571
+[DATA INFO] Cumulative profile no.1, ratio at slot  96 (8:0) = 0.004835
+[DATA INFO] Final cumulative profile ratio = 0.98233
+[DATA INFO] Allocating 4D memory for zone index (start from 0) 0 with the following dimensions: nM = 271, nX = 271, nY = 2, nZ = 1
+[PROCESS INFO] Step 2.1: Reading file demand_file_list section...
+[STATUS INFO] reading demand file demand.csv for scenario index = 0
+
+[WARNING] origin zone 0  has no activity nodes defined in node.csv or zone.csv.
+[DATA INFO] o_zone_id:1, d_zone_id: 74, value = 3.4696
+[DATA INFO] o_zone_id:1, d_zone_id: 86, value = 42.638
+[DATA INFO] reading file demand.csv, scenario no : 0, cumulative total demand volume is 127.33
+[STATUS INFO] reading demand file demand.csv for scenario index = 0
+
+[WARNING] origin zone 0  has no activity nodes defined in node.csv or zone.csv.
+[DATA INFO] o_zone_id:1, d_zone_id: 74, value = 3.4696
+[DATA INFO] o_zone_id:1, d_zone_id: 86, value = 42.638
+[DATA INFO] reading file demand.csv, scenario no : 0, cumulative total demand volume is 254.66
+[PROCESS INFO]
+demand_period and mode_type   total_demand     #_of_links      speed_mph     speed_kmph      length km   avg_lane_cap   avg_length_m
+             am,walk         127.33           5877          60.00          96.56         234.97        1154.09          39.98
+             am,bike         127.33           4087          60.00          96.56         183.84        1309.18          44.98
+[PROCESS INFO] Step 3: Allocating tasks to different memory blocks for efficient computing.
+[DATA INFO] There are 2 shortest path (SP) networks stored in memory for processing.
+[DATA INFO] There are 6 different agent types across various zones. These computations will be performed by the multi CPU processors.
+[PROCESS INFO] Step 4: Optimizing traffic assignment with Column Generation, an iterative method of adding (path) variables to solve large-scale problems. The optimization process involves creating and updating a set of candidate routes, known as the column pool
+[DATA INFO] Perform 40 iterations for the Column Generation process
+[PROCESS INFO] Creating a file named 'zonal_hierarchy_mapping.csv', which contains data about zones related to each subarea. This file will help us focus our approach on specific areas. 
+[PROCESS INFO] Current active scenario index: 0. Corresponding total demand: 254.66.
+--------------------------
+[PROCESS INFO] Step 4.1: Reading dynamic_traffic_management data...
+No dynamic lane use scenarios found in section dynamic_traffic_management.
+No lane closure scenarios found in section dynamic_traffic_management.
+[DATA INFO] Iter. No.   CPU time(s) Sys. Wide Travel TimeAvg TT              Least sys. TT       UE Gap (%)  
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 1           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 2           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 3           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 4           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 5           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 6           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 7           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 8           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 9           0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 10          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 11          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 12          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 13          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 14          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 15          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 16          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 17          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 18          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 19          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 20          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 21          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 22          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 23          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 24          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 25          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 26          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 27          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 28          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 29          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 30          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 31          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 32          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 33          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 34          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[CPU] short path for zone 0, proc 0
+[CPU] short path for zone 0, proc 0
+[DATA INFO] 35          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 36          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 37          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 38          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[DATA INFO] 39          0.03        7.14e+02            2.80                7.14e+02            0.00        
+[PROCESS INFO] Step 5: Column Pool Updating
+[DATA INFO] Total number of column pool updating iterations = 40
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[DATA INFO] column updating           0              2.80          0.00e+00            0.0000
+[PROCESS INFO] The User Equilibrium Convergence Percentage has been successfully achieved. The process of updating columns has now been completed
+[PROCESS INFO] Step 6: OD demand matrix estimation if section sensor_data is provided in settings.yml.
+[PROCESS INFO] Step 7: Performing Sensitivity Analysis. Proceeds only if sectiondynamic_traffic_management is provided with dtm_type set to either 'lane_closure'. 
+[PROCESS INFO] Step 7.1: Applying dynamic traffic_management scenarios
+[DATA INFO]  # of DTM records = 0
+[PROCESS INFO] Step 7.2: record route volume before applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 7.3: path column regeneration for applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 5: Column Re-Generation for Traffic Assignment...
+[DATA INFO] Total Column Re-Generation iteration: 0
+[DATA INFO] Regenerating column for real-time information provision - Iteration Number: 0
+, CPU time: 0.0320 s
+[PROCESS INFO] Step 7.4: skip: path column modification for dms users, as dms count = 0
+[PROCESS INFO] Step 7.5: path column pool optimization for real time information users
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[PROCESS INFO] Step 7.6: record route volume after applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 8: Executing Traffic Simulation. Proceeds only if simulation_output is set to 1 in settings.yml . 
+[DATA INFO] Total CPU running time for the entire process = 0.2150 s
+[PROCESS INFO] Step 9: Collecting statistics, generating zonal hierarchy mapping (e.g., Zone to Super-Zone and Zone to District Mapping)
+[PROCESS INFO] Step 10: Outputting Traffic Assignment and Simulation Results.
+[STATUS INFO] writing route_assignment.csv for each scenario
+[DATA INFO] o zone id =  700
+[DATA INFO] o zone id =  1800
+[DATA INFO] o zone id =  2100
+[STATUS INFO] writing file link_performance.csv
+[STATUS INFO] writing district_performance_s.csv..
+[STATUS INFO] writing od_performance_summary.csv..
+[STATUS INFO] writing data for 271  zones 
+[DATA INFO] o zone id =  700
+[DATA INFO] o zone id =  1800
+[DATA INFO] o zone id =  2100
+[STATUS INFO] writing link_performances_summary.csv..
+[STATUS INFO] writing link_performances_summary_2way.csv..
+[DATA INFO] CPU running time for outputting simulation results: 0.4320 s
+[STATUS INFO] Freeing memory..
+[DATA INFO] CPU running time for the entire process: 0 min 3 sec
+[STATUS INFO] DTALite computing process has successfully completed. Congratulations on a successful execution! Feel free to review the results and explore the generated outputs. Thank you for using DTALite and contributing to the advancement of transportation analysis and open science.

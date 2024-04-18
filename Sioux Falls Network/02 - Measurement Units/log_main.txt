@@ -1,0 +1,222 @@
+[WARNING] File link_qvdf.csv does not exist. Please check.
+affic Assignment Solution           
+ Overview of files and process
+1. Input Files:
+   |--- Physical Layer (node.csv, link.csv)
+   |--- Demand Layer (demand.csv, departure_time_profile, demand_file_list, subarea)
+   |--- Configuration Files (settings.yml, scenario_index_list)
+   |--- Supply Layer (link_type)
+
+2. Traffic Assignment and Simulation Process:
+   |--- Demand estimation based on sensor data
+   |--- Traffic assignment based on network and demand data
+   |--- Simulation of traffic based on assignment results and scenario configurations
+   |--- Performance evaluation based on simulation results and performance criteria
+
+3. Output Files:
+   |--- Link performance (link_performance_s.csv, link_performance_summary.csv)
+   |--- Route assignment (route_assignment_s.csv)
+   |--- OD pair and district performance (od_performance_summary.csv, district_performance_s.csv)
+   |--- Trajectory performance (agent_s.csv, trajectory.csv)
+   |--- System performance (system_performance_summary.csv, final_summary.csv)
+   |--- Logs and subarea mapping summary(log_main.txt, log_label_correcting, zonal_hierarchy_mapping.csv)
+--------------------------
+Please provide feedback or report any issues you encounter on our GitHub site: https://github.com/asu-trans-ai-lab/DTALite/issues. Your input helps us enhance the software, address any concerns, and contribute to the open-source transportation ecosystem.
+[PROCESS INFO] Step 0.0: Reading settings.yml.
+[DATA INFO] UE_convergence_percentage = 0.010000 (%) in settings.yml.
+[DATA INFO] number_of_column_updating_iterations = 40 in settings.yml.
+[DATA INFO] simulation_output = 0 in settings.yml.
+[DATA INFO] number_of_memory_blocks = 1 in settings.yml.
+[DATA INFO] number_of_iterations = 100 in settings.yml.
+[DATA INFO] max_num_significant_zones_in_subarea = 50000 in settings.yml.
+[DATA INFO] max_num_significant_zones_outside_subarea = 50000 in settings.yml.
+length_unit = mile in settings.yml.
+speed_unit = mph in settings.yml.
+lue = 100
+[DATA INFO] reading file demand.csv, scenario no : 0, cumulative total demand volume is 3.606e+05
+[PROCESS INFO]
+demand_period and mode_type   total_demand     #_of_links      speed_mph     speed_kmph      length km   avg_lane_cap   avg_length_m
+             am,auto      3.606e+05             76          60.34          97.10         315.77       10247.21        4154.82
+[PROCESS INFO] Step 3: Allocating tasks to different memory blocks for efficient computing.
+[DATA INFO] There are 1 shortest path (SP) networks stored in memory for processing.
+[DATA INFO] There are 24 different agent types across various zones. These computations will be performed by the multi CPU processors.
+[PROCESS INFO] Step 4: Optimizing traffic assignment with Column Generation, an iterative method of adding (path) variables to solve large-scale problems. The optimization process involves creating and updating a set of candidate routes, known as the column pool
+[DATA INFO] Perform 100 iterations for the Column Generation process
+[PROCESS INFO] Creating a file named 'zonal_hierarchy_mapping.csv', which contains data about zones related to each subarea. This file will help us focus our approach on specific areas. 
+[PROCESS INFO] Current active scenario index: 0. Corresponding total demand: 360600.00.
+--------------------------
+[PROCESS INFO] Step 4.1: Reading dynamic_traffic_management data...
+No dynamic lane use scenarios found in section dynamic_traffic_management.
+No lane closure scenarios found in section dynamic_traffic_management.
+[DATA INFO] Iter. No.   CPU time(s) Sys. Wide Travel TimeAvg TT              Least sys. TT       UE Gap (%)  
+[DATA INFO] 1           0.00        2.70e+07            74.85               3.18e+06            749.80      
+[DATA INFO] 2           0.00        2.38e+07            65.95               6.88e+06            245.59      
+[DATA INFO] 3           0.00        2.15e+07            59.56               8.87e+06            142.07      
+[DATA INFO] 4           0.00        1.49e+07            41.20               9.95e+06            49.35       
+[DATA INFO] 5           0.00        1.25e+07            34.64               1.03e+07            20.98       
+[DATA INFO] 6           0.00        1.12e+07            31.13               1.00e+07            12.02       
+[DATA INFO] 7           0.00        1.05e+07            29.06               9.53e+06            9.91        
+[DATA INFO] 8           0.00        9.97e+06            27.65               9.12e+06            9.30        
+[DATA INFO] 9           0.00        9.61e+06            26.65               8.83e+06            8.86        
+[DATA INFO] 10          0.00        9.33e+06            25.87               8.64e+06            7.96        
+[DATA INFO] 11          0.00        9.14e+06            25.34               8.50e+06            7.47        
+[DATA INFO] 12          0.00        8.95e+06            24.82               8.40e+06            6.51        
+[DATA INFO] 13          0.00        8.81e+06            24.44               8.25e+06            6.86        
+[DATA INFO] 14          0.00        8.70e+06            24.12               8.21e+06            5.97        
+[DATA INFO] 15          0.00        8.61e+06            23.88               8.14e+06            5.80        
+[DATA INFO] 16          0.00        8.52e+06            23.63               8.09e+06            5.37        
+[DATA INFO] 17          0.00        8.45e+06            23.44               8.03e+06            5.24        
+[DATA INFO] 18          0.00        8.39e+06            23.27               7.99e+06            5.10        
+[DATA INFO] 19          0.00        8.33e+06            23.11               7.97e+06            4.62        
+[DATA INFO] 20          0.00        8.29e+06            22.99               7.95e+06            4.33        
+[DATA INFO] 21          0.00        8.24e+06            22.84               7.92e+06            4.03        
+[DATA INFO] 22          0.00        8.19e+06            22.72               7.87e+06            4.13        
+[DATA INFO] 23          0.00        8.17e+06            22.65               7.85e+06            4.09        
+[DATA INFO] 24          0.00        8.14e+06            22.57               7.85e+06            3.72        
+[DATA INFO] 25          0.00        8.10e+06            22.47               7.84e+06            3.42        
+[DATA INFO] 26          0.00        8.07e+06            22.37               7.81e+06            3.26        
+[DATA INFO] 27          0.00        8.05e+06            22.32               7.77e+06            3.58        
+[DATA INFO] 28          0.00        8.03e+06            22.26               7.78e+06            3.21        
+[DATA INFO] 29          0.00        8.01e+06            22.22               7.77e+06            3.16        
+[DATA INFO] 30          0.00        7.98e+06            22.13               7.76e+06            2.83        
+[DATA INFO] 31          0.00        7.97e+06            22.09               7.73e+06            3.05        
+[DATA INFO] 32          0.00        7.95e+06            22.05               7.73e+06            2.79        
+[DATA INFO] 33          0.00        7.93e+06            22.00               7.72e+06            2.69        
+[DATA INFO] 34          0.00        7.92e+06            21.96               7.71e+06            2.69        
+[DATA INFO] 35          0.00        7.90e+06            21.92               7.71e+06            2.52        
+[DATA INFO] 36          0.00        7.90e+06            21.90               7.70e+06            2.64        
+[DATA INFO] 37          0.00        7.89e+06            21.87               7.70e+06            2.46        
+[DATA INFO] 38          0.00        7.88e+06            21.84               7.69e+06            2.37        
+[DATA INFO] 39          0.00        7.87e+06            21.81               7.68e+06            2.38        
+[DATA INFO] 40          0.00        7.85e+06            21.77               7.68e+06            2.16        
+[DATA INFO] 41          0.00        7.85e+06            21.76               7.67e+06            2.29        
+[DATA INFO] 42          0.00        7.84e+06            21.74               7.67e+06            2.22        
+[DATA INFO] 43          0.00        7.83e+06            21.71               7.67e+06            2.04        
+[DATA INFO] 44          0.00        7.81e+06            21.67               7.66e+06            1.99        
+[DATA INFO] 45          0.00        7.81e+06            21.66               7.65e+06            2.08        
+[DATA INFO] 46          0.00        7.80e+06            21.64               7.65e+06            1.94        
+[DATA INFO] 47          0.00        7.80e+06            21.62               7.65e+06            1.96        
+[DATA INFO] 48          0.00        7.79e+06            21.60               7.65e+06            1.87        
+[DATA INFO] 49          0.00        7.78e+06            21.57               7.64e+06            1.84        
+[DATA INFO] 50          0.00        7.77e+06            21.56               7.63e+06            1.86        
+[DATA INFO] 51          0.00        7.77e+06            21.55               7.63e+06            1.82        
+[DATA INFO] 52          0.00        7.77e+06            21.54               7.63e+06            1.77        
+[DATA INFO] 53          0.00        7.75e+06            21.49               7.63e+06            1.59        
+[DATA INFO] 54          0.00        7.75e+06            21.49               7.61e+06            1.80        
+[DATA INFO] 55          0.00        7.75e+06            21.48               7.61e+06            1.75        
+[DATA INFO] 56          0.00        7.74e+06            21.47               7.62e+06            1.65        
+[DATA INFO] 57          0.00        7.73e+06            21.44               7.62e+06            1.48        
+[DATA INFO] 58          0.00        7.73e+06            21.44               7.60e+06            1.68        
+[DATA INFO] 59          0.00        7.73e+06            21.43               7.61e+06            1.56        
+[DATA INFO] 60          0.00        7.72e+06            21.41               7.61e+06            1.51        
+[DATA INFO] 61          0.00        7.72e+06            21.40               7.60e+06            1.52        
+[DATA INFO] 62          0.00        7.72e+06            21.40               7.60e+06            1.50        
+[DATA INFO] 63          0.00        7.71e+06            21.39               7.60e+06            1.45        
+[DATA INFO] 64          0.00        7.70e+06            21.36               7.60e+06            1.35        
+[DATA INFO] 65          0.00        7.70e+06            21.35               7.59e+06            1.46        
+[DATA INFO] 66          0.00        7.70e+06            21.35               7.59e+06            1.38        
+[DATA INFO] 67          0.00        7.70e+06            21.34               7.59e+06            1.36        
+[DATA INFO] 68          0.00        7.69e+06            21.33               7.59e+06            1.37        
+[DATA INFO] 69          0.00        7.69e+06            21.31               7.59e+06            1.29        
+[DATA INFO] 70          0.00        7.69e+06            21.31               7.58e+06            1.34        
+[DATA INFO] 71          0.00        7.68e+06            21.30               7.59e+06            1.23        
+[DATA INFO] 72          0.00        7.68e+06            21.29               7.58e+06            1.29        
+[DATA INFO] 73          0.00        7.68e+06            21.29               7.58e+06            1.34        
+[DATA INFO] 74          0.00        7.67e+06            21.27               7.58e+06            1.20        
+[DATA INFO] 75          0.00        7.67e+06            21.27               7.58e+06            1.23        
+[DATA INFO] 76          0.00        7.67e+06            21.27               7.58e+06            1.24        
+[DATA INFO] 77          0.00        7.66e+06            21.25               7.58e+06            1.17        
+[DATA INFO] 78          0.00        7.66e+06            21.25               7.57e+06            1.18        
+[DATA INFO] 79          0.00        7.66e+06            21.25               7.57e+06            1.20        
+[DATA INFO] 80          0.00        7.66e+06            21.24               7.57e+06            1.15        
+[DATA INFO] 81          0.00        7.66e+06            21.23               7.57e+06            1.12        
+[DATA INFO] 82          0.00        7.65e+06            21.21               7.57e+06            1.02        
+[DATA INFO] 83          0.00        7.65e+06            21.21               7.56e+06            1.15        
+[DATA INFO] 84          0.00        7.65e+06            21.21               7.56e+06            1.12        
+[DATA INFO] 85          0.00        7.65e+06            21.21               7.57e+06            1.08        
+[DATA INFO] 86          0.00        7.64e+06            21.20               7.57e+06            1.01        
+[DATA INFO] 87          0.00        7.64e+06            21.20               7.56e+06            1.08        
+[DATA INFO] 88          0.00        7.64e+06            21.19               7.56e+06            1.02        
+[DATA INFO] 89          0.00        7.64e+06            21.18               7.56e+06            1.03        
+[DATA INFO] 90          0.00        7.64e+06            21.18               7.56e+06            1.04        
+[DATA INFO] 91          0.00        7.63e+06            21.17               7.56e+06            0.96        
+[DATA INFO] 92          0.00        7.63e+06            21.17               7.55e+06            1.05        
+[DATA INFO] 93          0.00        7.63e+06            21.16               7.56e+06            0.98        
+[DATA INFO] 94          0.00        7.63e+06            21.15               7.56e+06            0.95        
+[DATA INFO] 95          0.00        7.63e+06            21.16               7.55e+06            0.99        
+[DATA INFO] 96          0.00        7.62e+06            21.14               7.55e+06            0.92        
+[DATA INFO] 97          0.00        7.62e+06            21.14               7.55e+06            1.01        
+[DATA INFO] 98          0.00        7.62e+06            21.14               7.55e+06            0.95        
+[DATA INFO] 99          0.00        7.62e+06            21.14               7.55e+06            0.89        
+[PROCESS INFO] Step 5: Column Pool Updating
+[DATA INFO] Total number of column pool updating iterations = 40
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[DATA INFO] column updating           0             21.51          6.96e+04            0.4858
+[DATA INFO] column updating           1             20.41          2.19e+04            0.1577
+[DATA INFO] column updating           2             20.81          8.90e+03            0.0642
+[DATA INFO] column updating           3             20.82          5.77e+03            0.0416
+[DATA INFO] column updating           4             20.61          5.02e+03            0.0362
+[DATA INFO] column updating           5             20.81          4.47e+03            0.0322
+[DATA INFO] column updating           6             20.92          4.05e+03            0.0292
+[DATA INFO] column updating           7             20.87          3.85e+03            0.0278
+[DATA INFO] column updating           8             20.87          3.47e+03            0.0250
+[DATA INFO] column updating           9             20.70          3.32e+03            0.0240
+[DATA INFO] column updating          10             21.09          3.08e+03            0.0222
+[DATA INFO] column updating          11             20.88          2.99e+03            0.0215
+[DATA INFO] column updating          12             20.77          2.85e+03            0.0206
+[DATA INFO] column updating          13             20.84          2.73e+03            0.0197
+[DATA INFO] column updating          14             20.45          2.67e+03            0.0192
+[DATA INFO] column updating          15             20.51          2.57e+03            0.0186
+[DATA INFO] column updating          16             20.81          2.52e+03            0.0182
+[DATA INFO] column updating          17             20.37          2.44e+03            0.0176
+[DATA INFO] column updating          18             20.67          2.42e+03            0.0174
+[DATA INFO] column updating          19             21.21          2.36e+03            0.0170
+[DATA INFO] column updating          20             20.99          2.35e+03            0.0169
+[DATA INFO] column updating          21             20.76          2.29e+03            0.0165
+[DATA INFO] column updating          22             20.66          2.29e+03            0.0165
+[DATA INFO] column updating          23             20.96          2.23e+03            0.0161
+[DATA INFO] column updating          24             20.63          2.21e+03            0.0159
+[DATA INFO] column updating          25             21.32          2.18e+03            0.0157
+[DATA INFO] column updating          26             20.67          2.16e+03            0.0155
+[DATA INFO] column updating          27             20.52          2.14e+03            0.0154
+[DATA INFO] column updating          28             20.90          2.11e+03            0.0152
+[DATA INFO] column updating          29             20.79          2.09e+03            0.0151
+[DATA INFO] column updating          30             20.77          2.07e+03            0.0149
+[DATA INFO] column updating          31             20.34          2.04e+03            0.0147
+[DATA INFO] column updating          32             21.06          2.03e+03            0.0147
+[DATA INFO] column updating          33             20.95          2.01e+03            0.0145
+[DATA INFO] column updating          34             20.79          1.99e+03            0.0144
+[DATA INFO] column updating          35             20.82          1.97e+03            0.0142
+[DATA INFO] column updating          36             21.09          1.95e+03            0.0141
+[DATA INFO] column updating          37             21.18          1.94e+03            0.0140
+[DATA INFO] column updating          38             20.69          1.93e+03            0.0139
+[DATA INFO] column updating          39             21.01          1.91e+03            0.0138
+[PROCESS INFO] Step 6: OD demand matrix estimation if section sensor_data is provided in settings.yml.
+[PROCESS INFO] Step 7: Performing Sensitivity Analysis. Proceeds only if sectiondynamic_traffic_management is provided with dtm_type set to either 'lane_closure'. 
+[PROCESS INFO] Step 7.1: Applying dynamic traffic_management scenarios
+[DATA INFO]  # of DTM records = 0
+[PROCESS INFO] Step 7.2: record route volume before applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 7.3: path column regeneration for applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 5: Column Re-Generation for Traffic Assignment...
+[DATA INFO] Total Column Re-Generation iteration: 0
+[DATA INFO] Regenerating column for real-time information provision - Iteration Number: 0
+, CPU time: 0.0050 s
+[PROCESS INFO] Step 7.4: skip: path column modification for dms users, as dms count = 0
+[PROCESS INFO] Step 7.5: path column pool optimization for real time information users
+[DATA INFO] Column Updating:Iter. No.   Avg Travel Time   UE Gap Obj        UE Gap (%)          
+[PROCESS INFO] Step 7.6: record route volume after applying dynamic traffic_management scenarios
+[PROCESS INFO] Step 8: Executing Traffic Simulation. Proceeds only if simulation_output is set to 1 in settings.yml . 
+[DATA INFO] Total CPU running time for the entire process = 0.1920 s
+[PROCESS INFO] Step 9: Collecting statistics, generating zonal hierarchy mapping (e.g., Zone to Super-Zone and Zone to District Mapping)
+[PROCESS INFO] Step 10: Outputting Traffic Assignment and Simulation Results.
+[STATUS INFO] writing route_assignment.csv for each scenario
+[STATUS INFO] writing file link_performance.csv
+[STATUS INFO] writing district_performance_s.csv..
+[STATUS INFO] writing od_performance_summary.csv..
+[STATUS INFO] writing data for 24  zones 
+[STATUS INFO] writing link_performances_summary.csv..
+[STATUS INFO] writing link_performances_summary_2way.csv..
+[DATA INFO] CPU running time for outputting simulation results: 0.0670 s
+[STATUS INFO] Freeing memory..
+[DATA INFO] CPU running time for the entire process: 0 min 0 sec
+[STATUS INFO] DTALite computing process has successfully completed. Congratulations on a successful execution! Feel free to review the results and explore the generated outputs. Thank you for using DTALite and contributing to the advancement of transportation analysis and open science.

@@ -1,0 +1,173 @@
+[PROCESS INFO] Step 0: reading section scenarios
+[STATUS INFO] scenario_index=0,scenario_name=,scenario
+[PROCESS INFO] Step 1.1: Reading section demand_period ...
+,demand_period= 1, am,time_period=0800_0900, 480-> 540
+[PROCESS INFO] Step 1.2: Reading section mode_type...
+mode_type =, walk, real time info flag = 0
+mode_type =, bike, real time info flag = 0
+link_type =, 0, link_type_name = Centroids
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 1, link_type_name = motorway
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 2, link_type_name = trunk
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 3, link_type_name = primary
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 6, link_type_name = residential
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 4, link_type_name = secondary
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 5, link_type_name = tertiary
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 15, link_type_name = unclassified
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 8, link_type_name = service
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 11, link_type_name = collector
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 20, link_type_name = connector
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 70, link_type_name = shared_use
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 9, link_type_name = cycleway
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+link_type =, 10, link_type_name = footway
+,mode_type= walk,cap= 2000,free_speed=60
+,mode_type= bike,cap= 2000,free_speed=60
+, number of activity nodes defined in node.csv=, 271
+, number of boundary activity nodes defined in node.csv=, 271
+[PROCESS INFO] Step 1: read network node.csv, link.csv 
+,# of nodes = ,3526
+,# of links =,6064
+,# of zones =,271
+[PROCESS INFO] Step 1: read network node.csv, link.csv, zone.csv 
+,# of nodes = ,3526
+,# of links =,6064
+,# of zones =,271
+,summary by road link type,link_type,link_type_name,# of links,avg_free_speed_mph,avg_free_speed_kmph,,total_length,total_capacity,avg_lane_capacity,avg_length_in_meter,
+,,-1,,0,0,0,0,0,0,0,
+,,0,Centroids,0,0,0,0,0,0,0,
+,,1,motorway,0,0,0,0,0,0,0,
+,,2,trunk,0,0,0,0,0,0,0,
+,,3,primary,300,60,96.5604,27.6936,1.5102e+06,1800,92.312,
+,,4,secondary,160,60,96.5604,14.6204,668800,1600,91.3773,
+,,5,tertiary,180,60,96.5604,6.09431,262800,1200,33.8573,
+,,6,residential,357,60,96.5604,10.5141,373000,1000,29.4512,
+,,8,service,1579,60,96.5604,49.9518,1.2704e+06,800,31.6351,
+,,9,cycleway,187,60,96.5604,6.29627,156800,800,33.6699,
+,,10,footway,1977,60,96.5604,57.4301,1.5816e+06,800,29.0491,
+,,11,collector,0,0,0,0,0,0,0,
+,,15,unclassified,66,60,96.5604,2.4984,52800,800,37.8545,
+,,20,connector,1258,60,96.5604,66.1674,5.032e+06,2000,52.5973,
+,,70,shared_use,0,0,0,0,0,0,0,
+,,-1,,,,0,Centroids,,,1,motorway,,,2,trunk,,,3,primary,,,4,secondary,,,5,tertiary,,,6,residential,,,8,service,,,9,cycleway,,,10,footway,,,11,collector,,,15,unclassified,,,20,connector,,,70,shared_use,[PROCESS INFO] Step 2.1: read demand, defined in demand_files section.
+[STATUS INFO] reading demand file for scenario index = 0
+[STATUS INFO] reading demand file for scenario index = 0
+,summary by multi-modal and demand types,demand_period,mode_type,total demmand volume in scenario 0, # of links,avg_free_speed_mph,avg_free_speed_kmph,total_length_in_km,total_capacity,avg_lane_capacity,avg_length_in_meter,
+,,am,walk,127.332,5877,60,96.5604,234.97,1.07516e+07,1154.09,39.9813,
+,,am,bike,127.332,4087,60,96.5604,183.836,9.3268e+06,1309.18,44.9807,
+,from_flag,to_flag,volume
+,from_flag,to_flag,volume
+FOCUSING internal step 1: Focus-subarea Approach,0=not related, 1=significantly related external but not in cutoff, 2= cut-off external, 3= inside
+,0,1,2,3,
+0,0,0,0,0
+1,0,0,0,0
+2,0,0,0,0
+3,0,0,0,254.663
+FOCUSING internal step 2: Origin-based flow extraction,top 10 OD,rank,o,d,inside_flag_o,inside_flag_d,mode_type,departure_time,volume
+,,1,86,1,3,3,walk,am,46.1416
+,,2,86,1,3,3,bike,am,46.1416
+,,3,1,86,3,3,walk,am,42.6382
+,,4,1,86,3,3,bike,am,42.6382
+,,5,86,74,3,3,walk,am,15.8426
+,,6,86,74,3,3,bike,am,15.8426
+,,7,74,86,3,3,walk,am,15.5534
+,,8,74,86,3,3,bike,am,15.5534
+,,9,74,1,3,3,walk,am,3.68616
+,,10,74,1,3,3,bike,am,3.68616
+,,11,1,74,3,3,walk,am,3.46962
+,,12,1,74,3,3,bike,am,3.46962
+[PROCESS INFO]Step 4: Column Generation for Traffic Assignment
+,Total number of column generation iterations =, 40
+,Total number of column generation iterations =, 40
+[DATA INFO] Iteration, CPU running time (sec), # of agents, Avg Travel Time(min),  Avg UE gap %
+0,0.001,254.663,0,0
+1,0,254.663,2.80473,9.19639e-05
+2,0,254.663,2.80473,1.70526e-06
+3,0,254.663,2.80473,2.27117e-06
+4,0.001,254.663,2.80473,2.27116e-06
+5,0,254.663,2.80473,2.27116e-06
+6,0.001,254.663,2.80473,2.27116e-06
+7,0.001,254.663,2.80473,2.27116e-06
+8,0.001,254.663,2.80473,2.27116e-06
+9,0,254.663,2.80473,2.27116e-06
+10,0,254.663,2.80473,2.27116e-06
+11,0.001,254.663,2.80473,2.27116e-06
+12,0,254.663,2.80473,2.27116e-06
+13,0,254.663,2.80473,2.27116e-06
+14,0,254.663,2.80473,2.27116e-06
+15,0.002,254.663,2.80473,2.27116e-06
+16,0,254.663,2.80473,2.27116e-06
+17,0,254.663,2.80473,2.27116e-06
+18,0.001,254.663,2.80473,2.27116e-06
+19,0,254.663,2.80473,2.27116e-06
+20,0,254.663,2.80473,2.27116e-06
+21,0,254.663,2.80473,2.27116e-06
+22,0.001,254.663,2.80473,2.27116e-06
+23,0,254.663,2.80473,2.27116e-06
+24,0.001,254.663,2.80473,2.27116e-06
+25,0,254.663,2.80473,2.27116e-06
+26,0,254.663,2.80473,2.27116e-06
+27,0.002,254.663,2.80473,2.27116e-06
+28,0,254.663,2.80473,2.27116e-06
+29,0.001,254.663,2.80473,2.27116e-06
+30,0,254.663,2.80473,2.27116e-06
+31,0.001,254.663,2.80473,2.27116e-06
+32,0.002,254.663,2.80473,2.27116e-06
+33,0,254.663,2.80473,2.27116e-06
+34,0.001,254.663,2.80473,2.27116e-06
+35,0.001,254.663,2.80473,2.27116e-06
+36,0,254.663,2.80473,2.27116e-06
+37,0,254.663,2.80473,2.27116e-06
+38,0.001,254.663,2.80473,2.27116e-06
+39,0,254.663,2.80473,2.27116e-06
+[PROCESS INFO] Step 5: column pool-based flow updating for traffic assignment 
+,# of flow updating iterations=,40
+column updating
+[DATA INFO] column updating: iteration = 0, avg travel time = 2.80473(min), optimization obj = 0, Relative_gap = 0 %
+[PROCESS INFO] Step 7: perform sensitivity analysis if section dynamic_traffic_management is provided for dtm_type = lane_closure or dms. 
+Sensitivity analysis stage
+,Iteration,Avg Travel Time(min)
+0,2.80473,
+column updating
+[PROCESS INFO] Step 8: Executing Traffic Simulation. Proceeds only if simulation_output is set to 1 in settings.yml. 
+[PROCESS INFO] Step 9: Collecting statistics, Generating Zonal Hierarchy Mapping (e.g., Zone to Super-Zone and Zone to District Mapping) 
+Output Link Performance:
+,ref_link_vol_count=,0,MAPE=,0%
+,VMT=,443.916,VKT=,714.261
+,VHT=,11.9044
+,network vehicle speed (MPH) =,37.2902,,network vehicle speed (KPH) =,59.9999
+,PMT=,443.916,PKT=,714.261
+,PHT=,11.9044
+,network person speed (MPH) =,37.2902,,network person speed (KPH) =,59.9999
+,simple avg link volume=,2.81749
+,simple avg link speed=,16.9774
+,simple avg link speed ratio=,0.282956
+     Check OD connectivity and accessibility in od_performance_summary.csv
+, # of connected OD pairs =, 0
+, # of OD/mode_type/demand_type columns without paths =, 12
+Output Link Performance Summary
+Output 2 Way Link Performance Summary
